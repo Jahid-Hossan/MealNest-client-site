@@ -2,11 +2,17 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'navy': '#01144b',
+        'btn-clr': '#ff2424'
+      }
+    },
   },
+  // eslint-disable-next-line no-undef
   plugins: [require("daisyui")],
 }
 
