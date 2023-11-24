@@ -1,13 +1,18 @@
 import { Helmet } from "react-helmet";
 import NavBar from "../shared/NavBar";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 const Main = () => {
+
+    const location = useLocation();
+
+    const noHeaderFooter = location.pathname.includes('login') || location.pathname.includes('register');
+
     return (
         <div className="">
-            <div className="container mx-auto">
+            {noHeaderFooter || <div className="container mx-auto">
                 <NavBar />
-            </div>
+            </div>}
             <Outlet />
         </div>
     );

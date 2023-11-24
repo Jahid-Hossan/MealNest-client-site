@@ -5,6 +5,9 @@ const NavBar = () => {
 
     const user = false;
 
+
+
+
     const menus = <>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/menu">Meals</Link></li>

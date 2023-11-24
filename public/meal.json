@@ -1,0 +1,472 @@
+[
+    {
+        "title": "Classic Breakfast Burrito",
+        "type": "breakfast",
+        "image": "https://i.ibb.co/y6GmDHT/Classic-Breakfast-Burrito.jpg",
+        "ingredients": [
+            "Eggs",
+            "Black Beans",
+            "Cheese",
+            "Salsa",
+            "Tortilla"
+        ],
+        "description": "Start your day with a hearty breakfast burrito filled with scrambled eggs, black beans, cheese, and salsa.",
+        "price": 9.99,
+        "rating": 4.8,
+        "time": "2023-11-24T07:30:00Z",
+        "likes": 0,
+        "reviews": 0,
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Grilled Chicken Caesar Wrap",
+        "type": "lunch",
+        "image": "https://i.ibb.co/0GKyqBv/Grilled-Chicken-Caesar-Wrap.jpg",
+        "ingredients": [
+            "Grilled Chicken",
+            "Romaine Lettuce",
+            "Caesar Dressing",
+            "Tomatoes",
+            "Tortilla"
+        ],
+        "description": "Savor the flavors of a classic Caesar salad wrapped in a tortilla with grilled chicken and fresh tomatoes.",
+        "price": 11.99,
+        "rating": 4.5,
+        "time": "2023-11-24T12:00:00Z",
+        "likes": 0,
+        "reviews": 0,
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Spaghetti Bolognese",
+        "type": "dinner",
+        "image": "https://i.ibb.co/rGm8tkg/Spaghetti-Bolognese.jpg",
+        "ingredients": [
+            "Ground Beef",
+            "Tomato Sauce",
+            "Onions",
+            "Garlic",
+            "Spaghetti"
+        ],
+        "description": "Indulge in a classic Italian dish with flavorful Bolognese sauce served over a bed of perfectly cooked spaghetti.",
+        "price": 14.99,
+        "rating": 4.7,
+        "time": "2023-11-24T18:30:00Z",
+        "likes": 0,
+        "reviews": 0,
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Avocado Toast with Poached Eggs",
+        "type": "breakfast",
+        "image": "https://i.ibb.co/zsHyVv0/Avocado-Toast-with-Poached-Eggs.jpg",
+        "ingredients": [
+            "Avocado",
+            "Toast",
+            "Poached Eggs",
+            "Cherry Tomatoes",
+            "Salt",
+            "Pepper"
+        ],
+        "description": "A trendy and nutritious breakfast option featuring creamy avocado spread on toasted bread topped with poached eggs.",
+        "price": 10.99,
+        "rating": 4.6,
+        "time": "2023-11-25T08:15:00Z",
+        "likes": 0,
+        "reviews": 0,
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Mediterranean Quinoa Salad",
+        "type": "lunch",
+        "image": "https://i.ibb.co/8bmXrFW/Mediterranean-Quinoa-Salad.jpg",
+        "ingredients": [
+            "Quinoa",
+            "Cucumber",
+            "Tomatoes",
+            "Olives",
+            "Feta Cheese",
+            "Greek Dressing"
+        ],
+        "description": "A light and refreshing salad with quinoa, crisp vegetables, olives, and feta cheese, dressed in a tangy Greek dressing.",
+        "price": 12.49,
+        "rating": 4.4,
+        "time": "2023-11-25T12:45:00Z",
+        "likes": 0,
+        "reviews": 0,
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Grilled Salmon with Lemon Dill Sauce",
+        "type": "dinner",
+        "image": "https://i.ibb.co/WHXDrdF/Grilled-Salmon-with-Lemon-Dill-Sauce.jpg",
+        "ingredients": [
+            "Salmon Fillet",
+            "Lemon",
+            "Dill",
+            "Olive Oil",
+            "Salt",
+            "Pepper"
+        ],
+        "description": "Savor the rich flavors of grilled salmon paired with a zesty lemon dill sauce, a perfect dinner option for seafood lovers.",
+        "price": 16.99,
+        "rating": 4.9,
+        "time": "2023-11-25T19:00:00Z",
+        "likes": 0,
+        "reviews": 0,
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Blueberry Pancake Stack",
+        "type": "breakfast",
+        "image": "https://i.ibb.co/3r2LdFY/Blueberry-Pancake-Stack.jpg",
+        "ingredients": [
+            "Pancake Mix",
+            "Blueberries",
+            "Maple Syrup",
+            "Butter"
+        ],
+        "description": "Indulge in a sweet and fluffy stack of blueberry pancakes drizzled with warm maple syrup.",
+        "price": 9.49,
+        "rating": 4.7,
+        "time": "2023-11-26T08:30:00Z",
+        "likes": 0,
+        "reviews": 0,
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Caprese Sandwich",
+        "type": "lunch",
+        "image": "https://i.ibb.co/VY5jpk4/Caprese-Sandwich.jpg",
+        "ingredients": [
+            "Tomato",
+            "Mozzarella Cheese",
+            "Basil Leaves",
+            "Balsamic Glaze",
+            "Ciabatta Bread"
+        ],
+        "description": "Experience the classic Italian flavors in a Caprese sandwich with fresh tomatoes, mozzarella, and basil on ciabatta bread.",
+        "price": 10.99,
+        "rating": 4.5,
+        "time": "2023-11-26T12:15:00Z",
+        "likes": 0,
+        "reviews": 0,
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Sizzling Beef Fajitas",
+        "type": "dinner",
+        "image": "https://i.ibb.co/3fnTWkh/Sizzling-Beef-Fajitas.jpg",
+        "ingredients": [
+            "Beef Strips",
+            "Bell Peppers",
+            "Onions",
+            "Fajita Seasoning",
+            "Tortillas"
+        ],
+        "description": "Enjoy the sizzle and aroma of beef fajitas with colorful bell peppers and onions, served with warm tortillas.",
+        "price": 15.99,
+        "rating": 4.6,
+        "time": "2023-11-26T19:30:00Z",
+        "likes": 0,
+        "reviews": 0,
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Oatmeal Banana Nut Muffins",
+        "type": "breakfast",
+        "image": "https://i.ibb.co/T8H12nY/Oatmeal-Banana-Nut-Muffins.jpg",
+        "ingredients": [
+            "Oats",
+            "Bananas",
+            "Nuts",
+            "Flour",
+            "Milk",
+            "Honey"
+        ],
+        "description": "A healthy and delicious breakfast option with oatmeal, ripe bananas, and nuts baked into delightful muffins.",
+        "price": 8.99,
+        "rating": 4.4,
+        "time": "2023-11-27T09:00:00Z",
+        "likes": 0,
+        "reviews": 0,
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Chicken Pesto Pasta",
+        "type": "lunch",
+        "image": "https://i.ibb.co/4YDfbDN/Chicken-Pesto-Pasta.jpg",
+        "ingredients": [
+            "Chicken Breast",
+            "Pesto Sauce",
+            "Cherry Tomatoes",
+            "Parmesan Cheese",
+            "Penne Pasta"
+        ],
+        "description": "Savor the exquisite flavors of chicken pesto pasta with tender chicken, cherry tomatoes, and a basil-infused pesto sauce.",
+        "price": 13.99,
+        "rating": 4.8,
+        "time": "2023-11-27T13:00:00Z",
+        "likes": 0,
+        "reviews": 0,
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    }
+],
+// [
+//     {
+//         "title": "Classic Breakfast Burrito",
+//         "type": "breakfast",
+//         "image": "https://example.com/breakfast_burrito.jpg",
+//         "ingredients": [
+//             "Eggs",
+//             "Black Beans",
+//             "Cheese",
+//             "Salsa",
+//             "Tortilla"
+//         ],
+//         "description": "Start your day with a hearty breakfast burrito filled with scrambled eggs, black beans, cheese, and salsa.",
+//         "price": 9.99,
+//         "rating": 4.8,
+//         "time": "2023-11-24T07:30:00Z",
+//         "likes": 0,
+//         "reviews": 0,
+//         "adminName": "Jahid Hossan",
+//         "adminEmail": "jahidhossen02@gmail.com",
+//         "upcoming": "false"
+//     },
+//     {
+//         "title": "Grilled Chicken Caesar Wrap",
+//         "type": "lunch",
+//         "image": "https://example.com/chicken_caesar_wrap.jpg",
+//         "ingredients": [
+//             "Grilled Chicken",
+//             "Romaine Lettuce",
+//             "Caesar Dressing",
+//             "Tomatoes",
+//             "Tortilla"
+//         ],
+//         "description": "Savor the flavors of a classic Caesar salad wrapped in a tortilla with grilled chicken and fresh tomatoes.",
+//         "price": 11.99,
+//         "rating": 4.5,
+//         "time": "2023-11-24T12:00:00Z",
+//         "likes": 0,
+//         "reviews": 0,
+//         "adminName": "Jahid Hossan",
+//         "adminEmail": "jahidhossen02@gmail.com",
+//         "upcoming": "false"
+//     },
+//     {
+//         "title": "Spaghetti Bolognese",
+//         "type": "dinner",
+//         "image": "https://example.com/spaghetti_bolognese.jpg",
+//         "ingredients": [
+//             "Ground Beef",
+//             "Tomato Sauce",
+//             "Onions",
+//             "Garlic",
+//             "Spaghetti"
+//         ],
+//         "description": "Indulge in a classic Italian dish with flavorful Bolognese sauce served over a bed of perfectly cooked spaghetti.",
+//         "price": 14.99,
+//         "rating": 4.7,
+//         "time": "2023-11-24T18:30:00Z",
+//         "likes": 0,
+//         "reviews": 0,
+//         "adminName": "Jahid Hossan",
+//         "adminEmail": "jahidhossen02@gmail.com",
+//         "upcoming": "false"
+//     },
+//     {
+//         "title": "Avocado Toast with Poached Eggs",
+//         "type": "breakfast",
+//         "image": "https://example.com/avocado_toast.jpg",
+//         "ingredients": [
+//             "Avocado",
+//             "Toast",
+//             "Poached Eggs",
+//             "Cherry Tomatoes",
+//             "Salt",
+//             "Pepper"
+//         ],
+//         "description": "A trendy and nutritious breakfast option featuring creamy avocado spread on toasted bread topped with poached eggs.",
+//         "price": 10.99,
+//         "rating": 4.6,
+//         "time": "2023-11-25T08:15:00Z",
+//         "likes": 0,
+//         "reviews": 0,
+//         "adminName": "Jahid Hossan",
+//         "adminEmail": "jahidhossen02@gmail.com",
+//         "upcoming": "false"
+//     },
+//     {
+//         "title": "Mediterranean Quinoa Salad",
+//         "type": "lunch",
+//         "image": "https://example.com/quinoa_salad.jpg",
+//         "ingredients": [
+//             "Quinoa",
+//             "Cucumber",
+//             "Tomatoes",
+//             "Olives",
+//             "Feta Cheese",
+//             "Greek Dressing"
+//         ],
+//         "description": "A light and refreshing salad with quinoa, crisp vegetables, olives, and feta cheese, dressed in a tangy Greek dressing.",
+//         "price": 12.49,
+//         "rating": 4.4,
+//         "time": "2023-11-25T12:45:00Z",
+//         "likes": 0,
+//         "reviews": 0,
+//         "adminName": "Jahid Hossan",
+//         "adminEmail": "jahidhossen02@gmail.com",
+//         "upcoming": "false"
+//     },
+//     {
+//         "title": "Grilled Salmon with Lemon Dill Sauce",
+//         "type": "dinner",
+//         "image": "https://example.com/grilled_salmon.jpg",
+//         "ingredients": [
+//             "Salmon Fillet",
+//             "Lemon",
+//             "Dill",
+//             "Olive Oil",
+//             "Salt",
+//             "Pepper"
+//         ],
+//         "description": "Savor the rich flavors of grilled salmon paired with a zesty lemon dill sauce, a perfect dinner option for seafood lovers.",
+//         "price": 16.99,
+//         "rating": 4.9,
+//         "time": "2023-11-25T19:00:00Z",
+//         "likes": 0,
+//         "reviews": 0,
+//         "adminName": "Jahid Hossan",
+//         "adminEmail": "jahidhossen02@gmail.com",
+//         "upcoming": "false"
+//     },
+//     {
+//         "title": "Blueberry Pancake Stack",
+//         "type": "breakfast",
+//         "image": "https://example.com/blueberry_pancakes.jpg",
+//         "ingredients": [
+//             "Pancake Mix",
+//             "Blueberries",
+//             "Maple Syrup",
+//             "Butter"
+//         ],
+//         "description": "Indulge in a sweet and fluffy stack of blueberry pancakes drizzled with warm maple syrup.",
+//         "price": 9.49,
+//         "rating": 4.7,
+//         "time": "2023-11-26T08:30:00Z",
+//         "likes": 0,
+//         "reviews": 0,
+//         "adminName": "Jahid Hossan",
+//         "adminEmail": "jahidhossen02@gmail.com",
+//         "upcoming": "false"
+//     },
+//     {
+//         "title": "Caprese Sandwich",
+//         "type": "lunch",
+//         "image": "https://example.com/caprese_sandwich.jpg",
+//         "ingredients": [
+//             "Tomato",
+//             "Mozzarella Cheese",
+//             "Basil Leaves",
+//             "Balsamic Glaze",
+//             "Ciabatta Bread"
+//         ],
+//         "description": "Experience the classic Italian flavors in a Caprese sandwich with fresh tomatoes, mozzarella, and basil on ciabatta bread.",
+//         "price": 10.99,
+//         "rating": 4.5,
+//         "time": "2023-11-26T12:15:00Z",
+//         "likes": 0,
+//         "reviews": 0,
+//         "adminName": "Jahid Hossan",
+//         "adminEmail": "jahidhossen02@gmail.com",
+//         "upcoming": "false"
+//     },
+//     {
+//         "title": "Sizzling Beef Fajitas",
+//         "type": "dinner",
+//         "image": "https://example.com/beef_fajitas.jpg",
+//         "ingredients": [
+//             "Beef Strips",
+//             "Bell Peppers",
+//             "Onions",
+//             "Fajita Seasoning",
+//             "Tortillas"
+//         ],
+//         "description": "Enjoy the sizzle and aroma of beef fajitas with colorful bell peppers and onions, served with warm tortillas.",
+//         "price": 15.99,
+//         "rating": 4.6,
+//         "time": "2023-11-26T19:30:00Z",
+//         "likes": 0,
+//         "reviews": 0,
+//         "adminName": "Jahid Hossan",
+//         "adminEmail": "jahidhossen02@gmail.com",
+//         "upcoming": "false"
+//     },
+//     {
+//         "title": "Oatmeal Banana Nut Muffins",
+//         "type": "breakfast",
+//         "image": "https://example.com/banana_nut_muffins.jpg",
+//         "ingredients": [
+//             "Oats",
+//             "Bananas",
+//             "Nuts",
+//             "Flour",
+//             "Milk",
+//             "Honey"
+//         ],
+//         "description": "A healthy and delicious breakfast option with oatmeal, ripe bananas, and nuts baked into delightful muffins.",
+//         "price": 8.99,
+//         "rating": 4.4,
+//         "time": "2023-11-27T09:00:00Z",
+//         "likes": 0,
+//         "reviews": 0,
+//         "adminName": "Jahid Hossan",
+//         "adminEmail": "jahidhossen02@gmail.com",
+//         "upcoming": "false"
+//     },
+//     {
+//         "title": "Chicken Pesto Pasta",
+//         "type": "lunch",
+//         "image": "https://example.com/pesto_pasta.jpg",
+//         "ingredients": [
+//             "Chicken Breast",
+//             "Pesto Sauce",
+//             "Cherry Tomatoes",
+//             "Parmesan Cheese",
+//             "Penne Pasta"
+//         ],
+//         "description": "Savor the exquisite flavors of chicken pesto pasta with tender chicken, cherry tomatoes, and a basil-infused pesto sauce.",
+//         "price": 13.99,
+//         "rating": 4.8,
+//         "time": "2023-11-27T13:00:00Z",
+//         "likes": 0,
+//         "reviews": 0,
+//         "adminName": "Jahid Hossan",
+//         "adminEmail": "jahidhossen02@gmail.com",
+//         "upcoming": "false"
+//     }
+// ]
