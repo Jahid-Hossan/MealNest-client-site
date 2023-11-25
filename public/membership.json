@@ -1,0 +1,42 @@
+[
+    {
+        "level": "Bronze",
+        "price": "free",
+        "badgeImg": "https://i.ibb.co/bBCBkVM/bronge.png",
+        "facilities": [
+            "5% discount on all meals",
+            "Monthly newsletter with special offers",
+            "Access to members-only promotions"
+        ]
+    },
+    {
+        "level": "Silver",
+        "price": 99,
+        "badgeImg": "https://i.ibb.co/QKswzxX/silver-2.png",
+        "facilities": [
+            "10% discount on all meals",
+            "Exclusive access to members-only events",
+            "Priority seating on busy days"
+        ]
+    },
+    {
+        "level": "Platinum",
+        "price": 299,
+        "badgeImg": "https://i.ibb.co/SxFxkx9/platinum.png",
+        "facilities": [
+            "15% discount on all meals",
+            "VIP access to chef's specials",
+            "Complimentary dessert on every visit"
+        ]
+    },
+    {
+        "level": "Gold",
+        "price": 199,
+        "badgeImg": "https://i.ibb.co/j4mRXQN/gold.png",
+        "facilities": [
+            "20% discount on all meals",
+            "Priority reservations for special occasions",
+            "Free appetizer with every meal"
+        ]
+    }
+]

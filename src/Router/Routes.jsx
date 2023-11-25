@@ -4,6 +4,8 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Home from '../Pages/Home/Home/Home';
 import MealDetails from "../Pages/Home/MealDetails/MealDetails";
+import Meals from "../Pages/Meals/Meals";
+import Payment from "../Pages/Home/Payment/Payment";
 
 export const router = createBrowserRouter([
     {
@@ -13,6 +15,10 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home />
+            },
+            {
+                path: '/meals',
+                element: <Meals />
             },
             {
                 path: '/meals/:id',
@@ -26,6 +32,10 @@ export const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register />
+            },
+            {
+                path: '/payment',
+                element: <Payment />
             },
         ]
     }

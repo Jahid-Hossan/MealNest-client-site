@@ -1,6 +1,78 @@
-import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { Link, useNavigate } from "react-router-dom";
+import useAuth from "../Hooks/useAuth";
+import { GoogleAuthProvider } from "firebase/auth";
+import Swal from "sweetalert2";
 
 const Login = () => {
+
+    const { logIn, popUpGoogle } = useAuth()
+    const navigate = useNavigate()
+
+
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors },
+    } = useForm()
+
+    const provider = new GoogleAuthProvider();
+
+
+    const handleGoogle = () => {
+        popUpGoogle(provider)
+            .then(res => {
+                Swal.fire({
+                    icon: "success",
+                    position: 'top',
+                    title: "Register Successful",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(err => {
+                Swal.fire({
+                    icon: "err",
+                    position: 'top',
+                    title: "Register Successful",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            })
+    }
+
+    const onSubmit = async (data) => {
+        console.log(data)
+
+        const email = data.email;
+        // e.target.email.value = '';
+        const password = data.password;
+
+        logIn(email, password)
+            .then(res => {
+                Swal.fire({
+                    icon: "err",
+                    position: 'top',
+                    title: "Register Successful",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                reset()
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(err => {
+                Swal.fire({
+                    icon: "error",
+                    position: 'top',
+                    title: `${err}`,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            })
+    }
+
     return (
         <div>
             <section className="bg-white">
@@ -10,16 +82,18 @@ const Login = () => {
                             <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">Sign in to Celebration</h2>
                             <p className="mt-2 text-base text-gray-600">Don’t have an account? <Link to={'/register'} className="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 hover:underline focus:text-blue-700">Create a free account</Link></p>
 
-                            <form className="mt-8">
+                            <form onSubmit={handleSubmit(onSubmit)} className="mt-8">
                                 <div className="space-y-5">
                                     <div>
                                         <label className="text-base font-medium text-gray-900"> Email address </label>
                                         <div className="mt-2.5">
                                             <input
                                                 type="email"
+                                                {...register("email", { required: true })}
                                                 placeholder="Enter email to get started"
-                                                className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
+                                                className="block w-full py-4 pl-10 pr-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                                             />
+                                            {errors.email && <span className="text-red-600">Email is required</span>}
                                         </div>
                                     </div>
 
@@ -32,11 +106,19 @@ const Login = () => {
                                         <div className="mt-2.5">
                                             <input
                                                 type="password"
-                                                name=""
-                                                id=""
+                                                {...register("password", {
+                                                    required: true,
+                                                    minLength: 6,
+                                                    maxLength: 20,
+                                                    pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/
+                                                })}
                                                 placeholder="Enter your password"
-                                                className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
+                                                className="block w-full py-4 pl-10 pr-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                                             />
+                                            {errors.password?.type === 'required' && <p className="text-red-600">Password is required</p>}
+                                            {errors.password?.type === 'minLength' && <p className="text-red-600">Password must be 6 characters</p>}
+                                            {errors.password?.type === 'maxLength' && <p className="text-red-600">Password must be less than 20 characters</p>}
+                                            {errors.password?.type === 'pattern' && <p className="text-red-600">Password must have one Uppercase one lower case, one number and one special character.</p>}
                                         </div>
                                     </div>
 
@@ -48,6 +130,7 @@ const Login = () => {
 
                             <div className="mt-3 space-y-3">
                                 <button
+                                    onClick={handleGoogle}
                                     type="button"
                                     className="relative inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-gray-700 transition-all duration-200 bg-white border-2 border-gray-200 rounded-md hover:bg-gray-100 focus:bg-gray-100 hover:text-black focus:text-black focus:outline-none"
                                 >

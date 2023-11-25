@@ -10,7 +10,6 @@ import SectionTitle from "../../../../component/SectionTitle";
 
 const Testimonials = ({ allReviews }) => {
 
-    console.log(allReviews)
 
     return (
         <section className="my-20">
