@@ -10,7 +10,7 @@ const Main = () => {
 
     return (
         <div className="">
-            {noHeaderFooter || <div className="container mx-auto">
+            {noHeaderFooter || <div className=" bg-navy ">
                 <NavBar />
             </div>}
             <Outlet />

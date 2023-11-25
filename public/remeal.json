@@ -1,0 +1,361 @@
+[
+    {
+        "title": "Classic Breakfast Burrito",
+        "type": "breakfast",
+        "image": "https://i.ibb.co/y6GmDHT/Classic-Breakfast-Burrito.jpg",
+        "ingredients": [
+            "Eggs",
+            "Black Beans",
+            "Cheese",
+            "Salsa",
+            "Tortilla"
+        ],
+        "description": "Indulge in the perfect harmony of health and taste with our Oatmeal Banana Nut Muffins. These delightful breakfast treats feature a wholesome blend of heart-healthy oats, ripe bananas, and a generous dose of crunchy nuts, creating a moist and flavorful muffin experience. Baked to perfection, these muffins are not only a delicious way to start your day but also a nutritious choice packed with fiber and natural sweetness. Each bite is a celebration of balanced flavors, making these muffins a favorite for those who appreciate the goodness of a satisfying and wholesome breakfast.",
+        "price": 9.99,
+        "rating": 4.8,
+        "time": "2023-11-24T07:30:00Z",
+        "likes": 0,
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Grilled Chicken Caesar Wrap",
+        "type": "lunch",
+        "image": "https://i.ibb.co/0GKyqBv/Grilled-Chicken-Caesar-Wrap.jpg",
+        "ingredients": [
+            "Grilled Chicken",
+            "Romaine Lettuce",
+            "Caesar Dressing",
+            "Tomatoes",
+            "Tortilla"
+        ],
+        "description": "Indulge in the perfect harmony of health and taste with our Oatmeal Banana Nut Muffins. These delightful breakfast treats feature a wholesome blend of heart-healthy oats, ripe bananas, and a generous dose of crunchy nuts, creating a moist and flavorful muffin experience. Baked to perfection, these muffins are not only a delicious way to start your day but also a nutritious choice packed with fiber and natural sweetness. Each bite is a celebration of balanced flavors, making these muffins a favorite for those who appreciate the goodness of a satisfying and wholesome breakfast.",
+        "price": 11.99,
+        "rating": 4.5,
+        "time": "2023-11-24T12:00:00Z",
+        "likes": 0,
+        "reviews": [
+            {
+                "mealId": "6561bc02f38d8b1de4cbdf30",
+                "user": "David",
+                "rating": 4,
+                "comment": "The Grilled Chicken Caesar Wrap was a delightful lunch option. The grilled chicken was perfectly cooked, and the combination with fresh tomatoes and Caesar dressing made it a satisfying meal."
+            },
+            {
+                "mealId": "6561bc02f38d8b1de4cbdf30",
+                "user": "Eva",
+                "rating": 5,
+                "comment": "I enjoyed every bite of the Grilled Chicken Caesar Wrap! The flavors were well-balanced, and the tortilla held everything together nicely. A tasty and convenient lunch choice."
+            },
+            {
+                "mealId": "6561bc02f38d8b1de4cbdf30",
+                "user": "Frank",
+                "rating": 4,
+                "comment": "A solid lunch option. The grilled chicken was flavorful, and the Caesar dressing added a nice touch. I would recommend it to anyone looking for a quick and tasty meal."
+            }
+        ],
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Spaghetti Bolognese",
+        "type": "dinner",
+        "image": "https://i.ibb.co/rGm8tkg/Spaghetti-Bolognese.jpg",
+        "ingredients": [
+            "Ground Beef",
+            "Tomato Sauce",
+            "Onions",
+            "Garlic",
+            "Spaghetti"
+        ],
+        "description": "Indulge in the perfect harmony of health and taste with our Oatmeal Banana Nut Muffins. These delightful breakfast treats feature a wholesome blend of heart-healthy oats, ripe bananas, and a generous dose of crunchy nuts, creating a moist and flavorful muffin experience. Baked to perfection, these muffins are not only a delicious way to start your day but also a nutritious choice packed with fiber and natural sweetness. Each bite is a celebration of balanced flavors, making these muffins a favorite for those who appreciate the goodness of a satisfying and wholesome breakfast.",
+        "price": 14.99,
+        "rating": 4.7,
+        "time": "2023-11-24T18:30:00Z",
+        "likes": 0,
+        "reviews": [
+            {
+                "user": "Grace",
+                "rating": 5,
+                "comment": "The Spaghetti Bolognese was divine! The ground beef was well-seasoned, and the tomato sauce had a rich, savory flavor. A truly satisfying and comforting dinner."
+            },
+            {
+                "user": "Harry",
+                "rating": 4,
+                "comment": "A delicious and hearty meal. The Bolognese sauce was well-balanced, and the spaghetti was perfectly cooked. I'll be ordering this again for sure."
+            },
+            {
+                "user": "Isabel",
+                "rating": 5,
+                "comment": "The Spaghetti Bolognese exceeded my expectations! The flavors were incredible, and each bite was a delightful experience. Highly recommended!"
+            }
+        ],
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Avocado Toast with Poached Eggs",
+        "type": "breakfast",
+        "image": "https://i.ibb.co/zsHyVv0/Avocado-Toast-with-Poached-Eggs.jpg",
+        "ingredients": [
+            "Avocado",
+            "Toast",
+            "Poached Eggs",
+            "Cherry Tomatoes",
+            "Salt",
+            "Pepper"
+        ],
+        "description": "Indulge in the perfect harmony of health and taste with our Oatmeal Banana Nut Muffins. These delightful breakfast treats feature a wholesome blend of heart-healthy oats, ripe bananas, and a generous dose of crunchy nuts, creating a moist and flavorful muffin experience. Baked to perfection, these muffins are not only a delicious way to start your day but also a nutritious choice packed with fiber and natural sweetness. Each bite is a celebration of balanced flavors, making these muffins a favorite for those who appreciate the goodness of a satisfying and wholesome breakfast.",
+        "price": 10.99,
+        "rating": 4.6,
+        "time": "2023-11-25T08:15:00Z",
+        "likes": 0,
+        "reviews": [
+            {
+                "user": "Jack",
+                "rating": 5,
+                "comment": "The Avocado Toast with Poached Eggs was a delightful surprise! The creamy avocado paired perfectly with the poached eggs. A delicious and nutritious breakfast."
+            },
+            {
+                "user": "Katie",
+                "rating": 4,
+                "comment": "A trendy and tasty option for breakfast. The combination of avocado, poached eggs, and cherry tomatoes was refreshing and satisfying."
+            },
+            {
+                "user": "Leo",
+                "rating": 5,
+                "comment": "I loved the Avocado Toast with Poached Eggs! The flavors were balanced, and the presentation was Instagram-worthy. A great way to start the day!"
+            }
+        ],
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Mediterranean Quinoa Salad",
+        "type": "lunch",
+        "image": "https://i.ibb.co/8bmXrFW/Mediterranean-Quinoa-Salad.jpg",
+        "ingredients": [
+            "Quinoa",
+            "Cucumber",
+            "Tomatoes",
+            "Olives",
+            "Feta Cheese",
+            "Greek Dressing"
+        ],
+        "description": "A light and refreshing salad with quinoa, crisp vegetables, olives, and feta cheese, dressed in a tangy Greek dressing.These delightful breakfast treats feature a wholesome blend of heart-healthy oats, ripe bananas, and a generous dose of crunchy nuts, creating a moist and flavorful muffin experience. Baked to perfection, these muffins are not only a delicious way to start your day but also a nutritious choice packed with fiber and natural sweetness. Each bite is a celebration of balanced flavors, making these muffins a favorite for those who appreciate the goodness of a satisfying and wholesome breakfast.",
+        "price": 12.49,
+        "rating": 4.4,
+        "time": "2023-11-25T12:45:00Z",
+        "likes": 0,
+        "reviews": [
+            {
+                "user": "Mia",
+                "rating": 4,
+                "comment": "The Mediterranean Quinoa Salad was a fresh and flavorful lunch option. The combination of quinoa, veggies, and feta cheese with Greek dressing was a delightful treat."
+            },
+            {
+                "user": "Noah",
+                "rating": 5,
+                "comment": "I'm impressed with the Mediterranean Quinoa Salad! The ingredients were crisp, and the Greek dressing added the perfect zing. A must-try for salad enthusiasts."
+            },
+            {
+                "user": "Olivia",
+                "rating": 4,
+                "comment": "A light and satisfying salad. The mix of quinoa, vegetables, olives, and feta cheese was refreshing, and the Greek dressing tied it all together nicely."
+            }
+        ],
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Grilled Salmon with Lemon Dill Sauce",
+        "type": "dinner",
+        "image": "https://i.ibb.co/WHXDrdF/Grilled-Salmon-with-Lemon-Dill-Sauce.jpg",
+        "ingredients": [
+            "Salmon Fillet",
+            "Lemon",
+            "Dill",
+            "Olive Oil",
+            "Salt",
+            "Pepper"
+        ],
+        "description": "Savor the rich flavors of grilled salmon paired with a zesty lemon dill sauce, a perfect dinner option for seafood lovers.These delightful breakfast treats feature a wholesome blend of heart-healthy oats, ripe bananas, and a generous dose of crunchy nuts, creating a moist and flavorful muffin experience. Baked to perfection, these muffins are not only a delicious way to start your day but also a nutritious choice packed with fiber and natural sweetness. Each bite is a celebration of balanced flavors, making these muffins a favorite for those who appreciate the goodness of a satisfying and wholesome breakfast.",
+        "price": 16.99,
+        "rating": 4.9,
+        "time": "2023-11-25T19:00:00Z",
+        "likes": 0,
+        "reviews": [
+            {
+                "user": "Paul",
+                "rating": 5,
+                "comment": "The Grilled Salmon with Lemon Dill Sauce was a seafood lover's dream! The salmon was perfectly grilled, and the lemon dill sauce added a burst of freshness. Absolutely delicious!"
+            },
+            {
+                "user": "Quinn",
+                "rating": 5,
+                "comment": "An exquisite dinner choice! The grilled salmon was succulent, and the lemon dill sauce elevated the flavors. A must-try for seafood enthusiasts."
+            },
+            {
+                "user": "Rachel",
+                "rating": 4,
+                "comment": "I enjoyed the Grilled Salmon with Lemon Dill Sauce. The combination of flavors was delightful, and the salmon was cooked to perfection. A satisfying dinner option."
+            }
+        ],
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Blueberry Pancake Stack",
+        "type": "breakfast",
+        "image": "https://i.ibb.co/3r2LdFY/Blueberry-Pancake-Stack.jpg",
+        "ingredients": [
+            "Pancake Mix",
+            "Blueberries",
+            "Maple Syrup",
+            "Butter"
+        ],
+        "description": "Indulge in a sweet and fluffy stack of blueberry pancakes drizzled with warm maple syrup.These delightful breakfast treats feature a wholesome blend of heart-healthy oats, ripe bananas, and a generous dose of crunchy nuts, creating a moist and flavorful muffin experience. Baked to perfection, these muffins are not only a delicious way to start your day but also a nutritious choice packed with fiber and natural sweetness. Each bite is a celebration of balanced flavors, making these muffins a favorite for those who appreciate the goodness of a satisfying and wholesome breakfast.",
+        "price": 9.49,
+        "rating": 4.7,
+        "time": "2023-11-26T08:30:00Z",
+        "likes": 0,
+        "reviews": [
+            {
+                "user": "Sam",
+                "rating": 5,
+                "comment": "The Blueberry Pancake Stack was a sweet delight! The pancakes were fluffy, and the combination with blueberries and maple syrup was heavenly. A perfect breakfast treat."
+            },
+            {
+                "user": "Tina",
+                "rating": 4,
+                "comment": "A delightful breakfast choice. The blueberry pancakes were deliciously sweet, and the maple syrup added the perfect finishing touch. I thoroughly enjoyed it."
+            },
+            {
+                "user": "Ulysses",
+                "rating": 5,
+                "comment": "I loved every bite of the Blueberry Pancake Stack! The pancakes were light and fluffy, and the blueberries added a burst of freshness. A fantastic way to start the day."
+            }
+        ],
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Caprese Sandwich",
+        "type": "lunch",
+        "image": "https://i.ibb.co/VY5jpk4/Caprese-Sandwich.jpg",
+        "ingredients": [
+            "Tomato",
+            "Mozzarella Cheese",
+            "Basil Leaves",
+            "Balsamic Glaze",
+            "Ciabatta Bread"
+        ],
+        "description": "Experience the classic Italian flavors in a Caprese sandwich with fresh tomatoes, mozzarella, and basil on ciabatta bread.These delightful breakfast treats feature a wholesome blend of heart-healthy oats, ripe bananas, and a generous dose of crunchy nuts, creating a moist and flavorful muffin experience. Baked to perfection, these muffins are not only a delicious way to start your day but also a nutritious choice packed with fiber and natural sweetness. Each bite is a celebration of balanced flavors, making these muffins a favorite for those who appreciate the goodness of a satisfying and wholesome breakfast.",
+        "price": 10.99,
+        "rating": 4.5,
+        "time": "2023-11-26T12:15:00Z",
+        "likes": 0,
+        "reviews": [
+            {
+                "user": "Victoria",
+                "rating": 5,
+                "comment": "The Caprese Sandwich was a taste of Italy! The fresh tomatoes, mozzarella, and basil on ciabatta bread created a harmonious combination. I'll definitely order it again."
+            },
+            {
+                "user": "Walter",
+                "rating": 4,
+                "comment": "A satisfying lunch option. The Caprese Sandwich had a nice balance of flavors, and the ciabatta bread added a delightful crunch. Would recommend to others."
+            },
+            {
+                "user": "Xena",
+                "rating": 5,
+                "comment": "I thoroughly enjoyed the Caprese Sandwich! The ingredients were fresh, and the balsamic glaze added a nice tang. A delicious and satisfying lunch choice."
+            }
+        ],
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Sizzling Beef Fajitas",
+        "type": "dinner",
+        "image": "https://i.ibb.co/3fnTWkh/Sizzling-Beef-Fajitas.jpg",
+        "ingredients": [
+            "Beef Strips",
+            "Bell Peppers",
+            "Onions",
+            "Fajita Seasoning",
+            "Tortillas"
+        ],
+        "description": "Enjoy the sizzle and aroma of beef fajitas with colorful bell peppers and onions, served with warm tortillas.These delightful breakfast treats feature a wholesome blend of heart-healthy oats, ripe bananas, and a generous dose of crunchy nuts, creating a moist and flavorful muffin experience. Baked to perfection, these muffins are not only a delicious way to start your day but also a nutritious choice packed with fiber and natural sweetness. Each bite is a celebration of balanced flavors, making these muffins a favorite for those who appreciate the goodness of a satisfying and wholesome breakfast.",
+        "price": 15.99,
+        "rating": 4.6,
+        "time": "2023-11-26T19:30:00Z",
+        "likes": 0,
+        "reviews": [
+            {
+                "user": "Victoria",
+                "rating": 5,
+                "comment": "The Caprese Sandwich was a taste of Italy! The fresh tomatoes, mozzarella, and basil on ciabatta bread created a harmonious combination. I'll definitely order it again."
+            },
+            {
+                "user": "Walter",
+                "rating": 4,
+                "comment": "A satisfying lunch option. The Caprese Sandwich had a nice balance of flavors, and the ciabatta bread added a delightful crunch. Would recommend to others."
+            },
+            {
+                "user": "Xena",
+                "rating": 5,
+                "comment": "I thoroughly enjoyed the Caprese Sandwich! The ingredients were fresh, and the balsamic glaze added a nice tang. A delicious and satisfying lunch choice."
+            }
+        ],
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    },
+    {
+        "title": "Oatmeal Banana Nut Muffins",
+        "type": "breakfast",
+        "image": "https://i.ibb.co/T8H12nY/Oatmeal-Banana-Nut-Muffins.jpg",
+        "ingredients": [
+            "Oats",
+            "Bananas",
+            "Nuts",
+            "Flour",
+            "Milk",
+            "Honey"
+        ],
+        "description": "A healthy and delicious breakfast option with oatmeal, ripe bananas, and nuts baked into delightful muffins.These delightful breakfast treats feature a wholesome blend of heart-healthy oats, ripe bananas, and a generous dose of crunchy nuts, creating a moist and flavorful muffin experience. Baked to perfection, these muffins are not only a delicious way to start your day but also a nutritious choice packed with fiber and natural sweetness. Each bite is a celebration of balanced flavors, making these muffins a favorite for those who appreciate the goodness of a satisfying and wholesome breakfast.",
+        "price": 8.99,
+        "rating": 4.4,
+        "time": "2023-11-27T09:00:00Z",
+        "likes": 0,
+        "reviews": [
+            {
+                "user": "Victoria",
+                "rating": 5,
+                "comment": "The Caprese Sandwich was a taste of Italy! The fresh tomatoes, mozzarella, and basil on ciabatta bread created a harmonious combination. I'll definitely order it again."
+            },
+            {
+                "user": "Walter",
+                "rating": 4,
+                "comment": "A satisfying lunch option. The Caprese Sandwich had a nice balance of flavors, and the ciabatta bread added a delightful crunch. Would recommend to others."
+            },
+            {
+                "user": "Xena",
+                "rating": 5,
+                "comment": "I thoroughly enjoyed the Caprese Sandwich! The ingredients were fresh, and the balsamic glaze added a nice tang. A delicious and satisfying lunch choice."
+            }
+        ],
+        "adminName": "Jahid Hossan",
+        "adminEmail": "jahidhossen02@gmail.com",
+        "upcoming": "false"
+    }
+]
