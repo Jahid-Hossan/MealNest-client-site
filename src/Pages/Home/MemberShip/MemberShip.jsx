@@ -1,20 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
-import useAxiosPublic from "../../../Hooks/useAxiosPublic";
+
 import MembershipCard from "./MembershipCard";
+import useMemberships from './../../../Hooks/useMemberships';
 
 const MemberShip = () => {
 
-    const axiosPublic = useAxiosPublic()
-
-    const { data: memberships = [] } = useQuery({
-        queryKey: ['memberships'],
-        queryFn: async () => {
-            const res = await axiosPublic.get("/memberships")
-            return res.data;
-        }
-    })
-
-    console.log(memberships)
+    const [memberships] = useMemberships()
 
     // {memberships.map(membership=><div key={membership._id}
 

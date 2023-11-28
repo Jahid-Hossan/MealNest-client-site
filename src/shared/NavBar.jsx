@@ -12,7 +12,7 @@ const NavBar = () => {
     const menus = <>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/meals">Meals</Link></li>
-        <li><Link to="/order/salad">Upcoming </Link></li>
+        <li><Link to="/upcoming">Upcoming </Link></li>
     </>
 
 
@@ -44,14 +44,14 @@ const NavBar = () => {
                 {
                     user ? <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img alt="Tailwind CSS Navbar component" src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            <div className="w-10 rounded-full bg-white">
+                                <img alt="Tailwind CSS Navbar component" src="https://i.ibb.co/pKRHk26/profile.png" />
                             </div>
                         </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li>User Name</li>
-                            <li><a>Settings</a></li>
-                            <li><button onClick={logOut} >Logout</button></li>
+                        <ul tabIndex={0} className="menu  dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><p className="cursor-text disabled">{user?.displayName}</p></li>
+                            <li className="hover:bg-slate-300 rounded" ><Link to={'/dashboard'}>Dashboard</Link></li>
+                            <li className="hover:bg-slate-300 rounded" ><button onClick={logOut} >Logout</button></li>
                         </ul>
                     </div>
                         :

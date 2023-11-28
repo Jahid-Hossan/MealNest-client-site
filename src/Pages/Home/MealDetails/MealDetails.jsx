@@ -4,16 +4,21 @@ import Testimonials from "./Testimonials/Testimonials";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useAuth";
+import AddReview from "./Testimonials/AddReview/AddReview";
 
 const MealDetails = () => {
     const axiosSecure = useAxiosSecure()
     const { user } = useAuth();
     const navigate = useNavigate()
-
-    const location = useLocation();
-
-    // console.log(params)
     const lodedData = useLoaderData()
+    const meal = lodedData[0][0];
+    const allReviews = lodedData[1]
+
+    const { _id, title, type, image, ingredients, description, price, rating, time, likes, reviews, adminName, adminEmail, upcoming } = meal;
+
+    const date = time.split('T')[0]
+    console.log(allReviews)
+
 
     const handleLike = () => {
         if (!user) {
@@ -34,15 +39,26 @@ const MealDetails = () => {
 
 
         } else {
-            axiosSecure.patch(`/meals/${_id}`)
+            const userDetails = {
+                email: user.email
+            }
+            axiosSecure.patch(`/meals/${_id}`, userDetails)
                 .then(res => {
-                    console.log(res.data.modifiedCount)
+                    console.log(res.data)
 
-                    if (res.data.modifiedCount) {
+                    if (res.data.modifiedCount !== null) {
                         Swal.fire({
                             icon: "success",
                             position: 'top',
                             title: "Liked",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: "error",
+                            position: 'top',
+                            title: `${res.data.massage}`,
                             showConfirmButton: false,
                             timer: 1500
                         });
@@ -57,13 +73,62 @@ const MealDetails = () => {
     }
 
 
-    const meal = lodedData[0][0];
-    const allReviews = lodedData[1]
 
-    const { _id, title, type, image, ingredients, description, price, rating, time, likes, reviews, adminName, adminEmail, upcoming } = meal;
 
-    const date = time.split('T')[0]
-    console.log(typeof (likes))
+    const handleRequest = () => {
+        const requestedMealData = {
+            name: user?.name,
+            email: user?.email,
+            mealId: _id,
+            requesTime: new Date().toJSON(),
+            status: 'pending'
+        }
+
+        if (!user) {
+            Swal.fire({
+                title: "You need to log In first",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, Login"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate(`/login`)
+                }
+            });
+
+
+        } else {
+            axiosSecure.post('/requestMeals', requestedMealData)
+                .then(res => {
+                    console.log(res.data.insertedId)
+                    console.log(res.data.massage)
+
+                    if (res.data.insertedId) {
+                        Swal.fire({
+                            icon: "success",
+                            position: 'top',
+                            title: "Request Successful",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: "error",
+                            position: 'top',
+                            title: `${res.data.massage}`,
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                    }
+
+                })
+                .catch(err => {
+                    console.log(err)
+                })
+        }
+    }
 
     return (
         <div className="container mx-auto">
@@ -92,7 +157,7 @@ const MealDetails = () => {
                         }
                     </div>
                     <div className="flex gap-5">
-                        <button className="btn flex-1  border-[1px] border-btn-clr text-btn-clr text-xl hover:bg-btn-clr hover:text-white ">Request</button>
+                        <button onClick={handleRequest} className="btn flex-1  border-[1px] border-btn-clr text-btn-clr text-xl hover:bg-btn-clr hover:text-white ">Request</button>
                         <button onClick={handleLike} className="btn  border-[1px] border-btn-clr text-btn-clr text-xl hover:bg-btn-clr hover:text-white  ">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
                         </button>
@@ -112,6 +177,7 @@ const MealDetails = () => {
             <div>
 
             </div>
+            <AddReview id={_id}></AddReview>
             <Testimonials allReviews={allReviews}></Testimonials>
         </div>
     );

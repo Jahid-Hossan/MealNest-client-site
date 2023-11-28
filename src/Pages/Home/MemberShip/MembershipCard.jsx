@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const MembershipCard = ({ membership }) => {
-    console.log(membership)
+    // console.log(membership)
     const { _id, level, price, badgeImg, facilities } = membership;
     return (
         <div>
@@ -21,7 +21,7 @@ const MembershipCard = ({ membership }) => {
                             </li>)
                         }
                     </ul>
-                    <Link to={'/payment'}><button className="btn btn-ghost btn-wide mt-10 text-3xl bg-btn-clr hover:bg-navy text-white">Pay ${price}</button></Link>
+                    <Link to={`/payment/${_id}`}><button className="btn btn-ghost btn-wide mt-10 text-3xl bg-btn-clr hover:bg-navy text-white">Pay ${price}</button></Link>
                 </div>
             </div>
         </div>

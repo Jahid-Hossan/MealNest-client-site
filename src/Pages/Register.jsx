@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAxiosPublic from "../Hooks/useAxiosPublic";
 import useAuth from "../Hooks/useAuth";
 import Swal from 'sweetalert2';
+import useMemberships from "../Hooks/useMemberships";
 
 const Register = () => {
     const { passwordSignUp, handleUpdateUser } = useAuth();
@@ -10,6 +11,7 @@ const Register = () => {
 
     const location = useLocation();
     const navigate = useNavigate();
+    const [memberships, , freeMembership] = useMemberships()
 
 
     const {
@@ -38,37 +40,26 @@ const Register = () => {
             passwordSignUp(data.email, data.password)
                 .then(res => {
                     const name = data.name;
-
-
                     handleUpdateUser(name, img)
                         .then(() => {
-                            // const user = {
-                            //     name: data.name,
-                            //     email: data.email
-                            // }
+                            const user = {
+                                name: data.name,
+                                email: data.email,
+                                membershipId: [freeMembership[0]._id]
+                            }
 
-
-                            Swal.fire({
-                                icon: "success",
-                                position: 'top',
-                                title: "Register Successful",
-                                showConfirmButton: false,
-                                timer: 1500
-                            });
-                            navigate(location.state ? location.state : '/');
-
-                            // axiosPublic.post('/users', user)
-                            //     .then(res => {
-                            //         reset()
-                            //         Swal.fire({
-                            //             icon: "success",
-                            //             position: 'top',
-                            //             title: "Register Successful",
-                            //             showConfirmButton: false,
-                            //             timer: 1500
-                            //         });
-                            //         navigate(location.state ? location.state : '/');
-                            //     })
+                            axiosPublic.post('/users', user)
+                                .then(res => {
+                                    reset()
+                                    Swal.fire({
+                                        icon: "success",
+                                        position: 'top',
+                                        title: "Register Successful",
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    });
+                                    navigate(location.state ? location.state : '/');
+                                })
 
                         })
                 })

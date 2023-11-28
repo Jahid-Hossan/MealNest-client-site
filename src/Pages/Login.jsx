@@ -3,13 +3,17 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import { GoogleAuthProvider } from "firebase/auth";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../Hooks/useAxiosPublic";
+import useMemberships from "../Hooks/useMemberships";
 
 const Login = () => {
 
     const { logIn, popUpGoogle } = useAuth()
     const navigate = useNavigate()
+    const axiosPublic = useAxiosPublic()
+    const [memberships, , freeMembership] = useMemberships()
 
-
+    console.log(freeMembership)
     const {
         register,
         handleSubmit,
@@ -23,25 +27,52 @@ const Login = () => {
     const handleGoogle = () => {
         popUpGoogle(provider)
             .then(res => {
-                Swal.fire({
-                    icon: "success",
-                    position: 'top',
-                    title: "Register Successful",
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-                navigate(location?.state ? location.state : '/')
-            })
-            .catch(err => {
-                Swal.fire({
-                    icon: "err",
-                    position: 'top',
-                    title: "Register Successful",
-                    showConfirmButton: false,
-                    timer: 1500
-                });
+                const user = {
+                    name: res.user.displayName,
+                    email: res.user.email,
+                    membershipId: [freeMembership[0]._id]
+                }
+                axiosPublic.post('/users', user)
+                    .then(res => {
+                        console.log(res.data)
+                        if (res.data.insertedId === null) {
+                            Swal.fire({
+                                icon: "success",
+                                position: 'top',
+                                title: "Welcome Back",
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                        } else {
+                            Swal.fire({
+                                icon: "success",
+                                position: 'top',
+                                title: "Login successful",
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                        }
+
+
+                        navigate(location?.state ? location.state : '/')
+                    })
+                    .catch(err => {
+                        console.log(err)
+                        const errorCode = err.code;
+                        const errorMessage = err.message
+                        console.log(errorCode, errorMessage.split("/"));
+                        Swal.fire({
+                            icon: "error",
+                            position: 'top',
+                            title: `${errorMessage.split("/")[1]}`,
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    })
             })
     }
+
+
 
     const onSubmit = async (data) => {
         console.log(data)
@@ -55,7 +86,7 @@ const Login = () => {
                 Swal.fire({
                     icon: "err",
                     position: 'top',
-                    title: "Register Successful",
+                    title: "Login Successful",
                     showConfirmButton: false,
                     timer: 1500
                 });
@@ -63,10 +94,14 @@ const Login = () => {
                 navigate(location?.state ? location.state : '/')
             })
             .catch(err => {
+                console.log(err)
+                const errorCode = err.code;
+                const errorMessage = err.message
+                console.log(errorCode, errorMessage.split("/"));
                 Swal.fire({
                     icon: "error",
                     position: 'top',
-                    title: `${err}`,
+                    title: `${errorMessage.split("/")[1]}`,
                     showConfirmButton: false,
                     timer: 1500
                 });
