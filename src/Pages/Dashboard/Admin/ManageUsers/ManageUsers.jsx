@@ -1,40 +1,61 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GrPowerReset } from "react-icons/gr";
 
 const ManageUsers = () => {
     const [text, setText] = useState('')
     const axiosSecure = useAxiosSecure()
+    const [data, setData] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [memberships, setMemberships] = useState(null);
+    const [totalUsers, setTotalUsers] = useState(null);
 
-
-
+    const pageSize = 10;
 
     // console.log(text)
 
-    const { data, refetch } = useQuery({
-        queryKey: ['users'],
-        queryFn: async () => {
-            const res = await axiosSecure.get(`/all-users?text=${text}`)
-            // console.log(res.data)
-            return res.data
-        }
-    })
+    // const { data, refetch } = useQuery({
+    //     queryKey: ['users'],
+    //     queryFn: async () => {
+    //         const res = await axiosSecure.get(`/all-users?text=${text}&page=${currentPage}&limit=${pageSize}`)
+    //         // console.log(res.data)
+    //         return res.data
+    //     }
+    // })
+
+    useEffect(() => {
+        const fetchData = async () => {
+            // Fetch data based on current page and text
+            const res = await axiosSecure.get(`/all-users?text=${text}&page=${currentPage}&limit=${pageSize}`);
+            setData(res.data.result);
+            setMemberships(res.data.memberships);
+            setTotalUsers(res?.data?.totalUsers);
+            console.log(res?.data)
+        };
+
+        fetchData();
+    }, [currentPage, text, axiosSecure]);
+
+
+
+
+    const totalPages = Math.ceil(totalUsers / pageSize);
 
     const handleSearch = (e) => {
         e.preventDefault()
-        refetch()
+        // refetch()
         e.target.name.value = ''
     }
 
-    if (text === '') {
-        refetch()
-    }
+    // if (text === '') {
+    //     // refetch()
+    // }
 
 
-    const users = data?.result;
-    const memberships = data?.memberships
+    // const users = data?.result;
+    // const memberships = data?.memberships
 
 
 
@@ -43,7 +64,7 @@ const ManageUsers = () => {
         axiosSecure.patch(`/users/${user?._id}`)
             .then(res => {
                 if (res.data.modifiedCount > 0) {
-                    refetch()
+                    // refetch()
                 }
             })
     }
@@ -51,13 +72,7 @@ const ManageUsers = () => {
 
 
     return (
-        <div id="scrollableDiv"
-            style={{
-                height: 440,
-                overflow: 'auto',
-                display: 'flex',
-                flexDirection: 'column-reverse',
-            }} className="my-5">
+        <div className="my-5">
             <div>
                 <div className="grow">
                     <form onSubmit={handleSearch} className=" top-0 flex">
@@ -81,7 +96,7 @@ const ManageUsers = () => {
                         </thead>
                         <tbody>
                             {
-                                users?.map((user, idx) => <tr key={user?._id}>
+                                data?.map((user, idx) => <tr key={user?._id}>
                                     <th>{idx + 1}</th>
                                     <td>{user?.name}</td>
                                     <td>{user?.email}</td>
@@ -120,6 +135,22 @@ const ManageUsers = () => {
 
                         </tbody>
                     </table>
+                </div>
+                <div className="flex justify-between mt-4">
+                    <p className="text-gray-600">
+                        Showing {((currentPage - 1) * pageSize) + 1}-{Math.min(currentPage * pageSize, totalUsers)} of {totalUsers} users
+                    </p>
+                    <div className="flex space-x-2">
+                        {Array.from({ length: totalPages }, (_, i) => (
+                            <button
+                                key={i + 1}
+                                onClick={() => setCurrentPage(i + 1)}
+                                className={`px-3 py-1 rounded-md ${currentPage === i + 1 ? 'bg-navy text-white' : 'hover:bg-navy hover:text-white'}`}
+                            >
+                                {i + 1}
+                            </button>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

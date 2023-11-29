@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import NavBar from "../shared/NavBar";
 import { Outlet, useLocation } from "react-router-dom";
+import Footer2 from "../shared/Footer2";
 
 const Main = () => {
 
@@ -14,6 +15,7 @@ const Main = () => {
                 <NavBar />
             </div>}
             <Outlet />
+            <Footer2></Footer2>
         </div>
     );
 };

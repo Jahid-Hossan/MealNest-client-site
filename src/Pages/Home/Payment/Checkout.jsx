@@ -84,6 +84,16 @@ const Checkout = ({ params }) => {
                     showConfirmButton: false,
                     timer: 1500
                 });
+                const payment = {
+                    email: user.email,
+                    price: totalPrice,
+                    date: new Date(),
+                    transactionId: paymentIntent.id,
+                    membershipId: membership[0]?._id,
+                }
+
+                const res = await axiosSecure.post('/payments', payment);
+                console.log('payment saved', res.data)
             }
         }
     }

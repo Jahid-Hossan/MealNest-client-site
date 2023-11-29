@@ -3,14 +3,13 @@ import { FaBook, FaCalendar, FaCalendarCheck, FaEnvelope, FaHome, FaList, FaList
 import { MdOutlineReviews } from "react-icons/md";
 import NavBar from "../../../shared/NavBar";
 import { GiForkKnifeSpoon, GiHotMeal, GiMeal } from "react-icons/gi";
-// import useAdmin from "../../../hooks/useAdmin";
+import useAdmin from "../../../Hooks/useAdmin";
 
 const Dashboard = () => {
 
-    // const [isAdmin] = useAdmin()
+    const [isAdmin] = useAdmin()
 
-    // console.log(isAdmin)
-    const isAdmin = true;
+
 
     return (
         <div className="">
@@ -21,7 +20,7 @@ const Dashboard = () => {
                         {
                             isAdmin ? <>
                                 <li>
-                                    <NavLink to={'/dashboard/admin-profile'} >
+                                    <NavLink to={'/dashboard/admin-home'} >
                                         <FaUser></FaUser>
                                         Admin Profile
                                     </NavLink>
@@ -73,7 +72,7 @@ const Dashboard = () => {
                                 :
                                 <>
                                     <li>
-                                        <NavLink to={'/dashboard/profile'} >
+                                        <NavLink to={'/dashboard/user-home'} >
                                             <FaUser></FaUser>
                                             My Profile
                                         </NavLink>

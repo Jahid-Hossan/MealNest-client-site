@@ -114,7 +114,7 @@ const Meals = () => {
             </div>
 
             <InfiniteScroll
-                className="my-5 px-5 rounded-md lg:my-10 grid grid-cols-3 gap-5"
+                className="my-5 px-5 rounded-md lg:my-10 grid grid-cols-1 lg:grid-cols-3 gap-5"
                 dataLength={filteredMeals?.length}
 
                 hasMore={true}

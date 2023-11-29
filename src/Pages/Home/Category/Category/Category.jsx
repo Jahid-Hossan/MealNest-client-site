@@ -41,7 +41,7 @@ const Category = () => {
 
                     {/* all meals */}
                     <TabPanel>
-                        <div data-aos="fade-up" className="my-5 rounded-md lg:my-10 grid grid-cols-3 gap-5">
+                        <div data-aos="fade-up" className="my-5 rounded-md lg:my-10 grid grid-cols-1 lg:grid-cols-3  gap-5">
                             {
                                 meals?.map(item => <CategoryTab key={item._id} item={item}></CategoryTab>)
                             }
@@ -50,17 +50,29 @@ const Category = () => {
 
                     {/* breakfast */}
                     <TabPanel>
-                        <h2>Any content 2</h2>
+                        <div data-aos="fade-up" className="my-5 rounded-md lg:my-10 grid grid-cols-1 lg:grid-cols-3 gap-5">
+                            {
+                                breakfast?.map(item => <CategoryTab key={item._id} item={item}></CategoryTab>)
+                            }
+                        </div>
                     </TabPanel>
 
                     {/* lunch */}
                     <TabPanel>
-                        <h2>Any content 2</h2>
+                        <div data-aos="fade-up" className="my-5 rounded-md lg:my-10 grid grid-cols-1 lg:grid-cols-3 gap-5">
+                            {
+                                lunch?.map(item => <CategoryTab key={item._id} item={item}></CategoryTab>)
+                            }
+                        </div>
                     </TabPanel>
 
                     {/* dinner */}
                     <TabPanel>
-                        <h2>Any content 2</h2>
+                        <div data-aos="fade-up" className="my-5 rounded-md lg:my-10 grid grid-cols-1 lg:grid-cols-3 gap-5">
+                            {
+                                dinner?.map(item => <CategoryTab key={item._id} item={item}></CategoryTab>)
+                            }
+                        </div>
                     </TabPanel>
                 </Tabs>
             </div>

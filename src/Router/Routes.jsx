@@ -52,55 +52,55 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/payment/:id',
-                element: <Payment />
+                element: <PrivetRoute><Payment /></PrivetRoute>
             },
         ]
     },
     {
-        path: '/dashboard',
+        path: 'dashboard',
         element: <PrivetRoute><Dashboard /></PrivetRoute>,
         children: [
             {
-                path: '/dashboard/profile',
+                path: 'user-home',
                 element: <Profile />
             },
             {
-                path: '/dashboard/request',
+                path: 'request',
                 element: <RequestedMeal />
             },
             {
-                path: '/dashboard/my-reviews',
+                path: 'my-reviews',
                 element: <MyReview></MyReview>
             },
 
             // admin routes
 
             {
-                path: '/dashboard/admin-profile',
+                path: 'admin-home',
                 element: <AdminProfile></AdminProfile>
             },
             {
-                path: '/dashboard/users',
+                path: 'users',
                 element: <ManageUsers></ManageUsers>
             },
             {
-                path: '/dashboard/add-meals',
+                path: 'add-meals',
                 element: <AddMeals></AddMeals>
             },
             {
-                path: '/dashboard/all-meals',
+                path: 'all-meals',
                 element: <AllMeals></AllMeals>
             },
             {
-                path: '/dashboard/all-reviews',
+                path: 'all-reviews',
                 element: <AllReviews></AllReviews>
             },
             {
-                path: '/dashboard/serve-meals',
+                path: 'serve-meals',
                 element: <ServeMeals></ServeMeals>
             },
             {
-                path: '/dashboard/upcoming-meals',
+                path: 'upcoming-meals',
                 element: <UpcomingMeals></UpcomingMeals>
             },
         ]

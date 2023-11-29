@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import ButtonMD from "../component/Button";
 import useAuth from "../Hooks/useAuth";
 
@@ -9,11 +9,13 @@ const NavBar = () => {
 
 
 
-    const menus = <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/meals">Meals</Link></li>
-        <li><Link to="/upcoming">Upcoming </Link></li>
-    </>
+    const menus = (
+        <>
+            <li><NavLink to="/" activeClassName={'bg-red'}>Home</NavLink></li>
+            <li><NavLink to="/meals" activeClassName={'bg-red'}>Meals</NavLink></li>
+            <li><NavLink to="/upcoming" activeClassName={'bg-red'}>Upcoming</NavLink></li>
+        </>
+    );
 
 
     return (
@@ -27,7 +29,10 @@ const NavBar = () => {
                         {menus}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-white text-xl">daisyUI</a>
+                <div className="flex items-center">
+                    <img src={'https://i.ibb.co/TmXhv7n/pngwing-com-6.png'} alt="" className="h-10" />
+                    <a className=" text-white text-xl font-bold">MealNest</a>
+                </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu text-white menu-horizontal px-1">
