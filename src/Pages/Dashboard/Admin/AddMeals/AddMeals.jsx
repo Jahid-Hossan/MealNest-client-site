@@ -1,14 +1,72 @@
-import React from 'react';
+
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
+import { useState } from 'react';
+import useAxiosSecure from '../../../../Hooks/useAxiosSecure';
+import Swal from 'sweetalert2';
 
 
 const AddMeals = () => {
+    const [upcoming, setUpcoming] = useState("false")
+    const axiosSecure = useAxiosSecure()
+    const { register, handleSubmit, reset } = useForm();
+
+    const image_hosting_key = import.meta.env.VITE_image_hosting_api_key;
+    const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 
 
-    const { register, handleSubmit } = useForm();
+    const onSubmit = async (data) => {
 
-    const onSubmit = (data) => {
-        console.log(data); // You can handle form submission logic here
+        const imageFile = { image: data.mealImage[0] };
+        const ingredientsArr = data.ingredients.split(',');
+
+        console.log(ingredientsArr)
+
+        const res = await axios.post(image_hosting_api, imageFile, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
+        console.log(res.data.data.display_url)
+        const img = res.data.data.display_url;
+
+        const mealData =
+        {
+            title: data.mealTitle,
+            type: data.mealType,
+            image: img,
+            description: data.description,
+            ingredients: ingredientsArr,
+            price: data.price,
+            rating: 0,
+            time: data.dateTime,
+            likes: 0,
+            reviews: 0,
+            adminName: data.adminName,
+            adminEmail: data.adminEmail,
+            upcoming: upcoming,
+        }
+        console.log(mealData)
+
+        if (res.data.success) {
+            const res = await axiosSecure.post('/add-meals', mealData)
+            const data = res.data;
+            if (data.insertedId) {
+                Swal.fire({
+                    icon: "success",
+                    position: 'top',
+                    title: "Data Successfully added",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                reset()
+            }
+        }
+
+
+
+
+
     };
 
     return (
@@ -17,7 +75,7 @@ const AddMeals = () => {
 
         <div id="scrollableDiv"
             style={{
-                height: 'calc(100vh - 100px)',
+                height: 440,
                 overflow: 'auto',
                 display: 'flex',
                 flexDirection: 'column-reverse',
@@ -83,10 +141,11 @@ const AddMeals = () => {
                     <div className="mb-4 flex-1">
                         <label className="block text-gray-600 text-sm font-semibold mb-2">Price</label>
                         <input
+                            step='any'
                             type="number"
                             name="price"
                             className="w-full p-2 border rounded-md"
-                            {...register('price', { required: true, min: 0 })}
+                            {...register('price', { required: true })}
                         />
                     </div>
 
@@ -123,6 +182,7 @@ const AddMeals = () => {
 
                 <div className="flex justify-between">
                     <button
+                        onClick={() => setUpcoming("false")}
                         type="submit"
                         className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue"
                     >
@@ -130,7 +190,8 @@ const AddMeals = () => {
                     </button>
 
                     <button
-                        type="button"
+                        onClick={() => setUpcoming("true")}
+                        type="submit"
                         className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 focus:outline-none focus:shadow-outline-green"
                     >
                         Add to Upcoming

@@ -27,6 +27,7 @@ const Register = () => {
     const onSubmit = async (data) => {
 
         const imageFile = { image: data.image[0] }
+        console.log(data.image)
 
         const res = await axiosPublic.post(image_hosting_api, imageFile, {
             headers: {

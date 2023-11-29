@@ -1,6 +1,5 @@
-import { useEffect } from "react";
 
-import { FaRegStar, FaStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const CategoryTab = ({ item }) => {
     const { _id, title, type, image, ingredients, description, price, rating, time, likes, reviews, adminName, adminEmail, upcoming
@@ -10,7 +9,7 @@ const CategoryTab = ({ item }) => {
 
     return (
         <div>
-            <div className="shadow-sm rounded-lg group ">
+            <div className="shadow-md rounded-lg group ">
                 <div className="overflow-hidden rounded-t-lg">
                     <img src={image} alt="" className="
                 transition ease-in duration-300 transform group-hover:scale-110

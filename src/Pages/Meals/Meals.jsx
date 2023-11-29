@@ -28,7 +28,10 @@ const Meals = () => {
 
     useEffect(() => {
         axiosPublic(url)
-            .then(res => setFilteredMeals(res.data))
+            .then(res => {
+                const notUpcoming = res.data.filter(data => data.upcoming === false)
+                setFilteredMeals(notUpcoming)
+            })
     }, [url])
 
     // console.log(category)

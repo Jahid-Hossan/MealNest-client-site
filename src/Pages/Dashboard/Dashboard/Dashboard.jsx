@@ -16,7 +16,7 @@ const Dashboard = () => {
         <div className="">
             <div className="bg-navy"><NavBar /></div>
             <div className="flex">
-                <div className="w-64 min-h-screen  sticky bg-navy text-white" style={{ minHeight: 'calc(100vh - 84px)' }}>
+                <div className="w-64 min-h-screen  sticky bg-navy text-white" style={{ minHeight: 'calc(100vh - 68px)' }}>
                     <ul className="menu  w-56 rounded-box">
                         {
                             isAdmin ? <>
@@ -97,7 +97,10 @@ const Dashboard = () => {
                     </ul>
 
                 </div>
-                <div className="w-full min-h-screen px-8" style={{ minHeight: 'calc(100vh - 84px)' }}>
+                <div
+                    style={{
+                        minHeight: 'calc(100vh - 68px)',
+                    }} className="w-full min-h-screen px-8" >
 
                     <Outlet></Outlet>
                 </div>

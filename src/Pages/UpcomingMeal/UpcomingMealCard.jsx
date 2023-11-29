@@ -10,7 +10,7 @@ const UpcomingMealCard = ({ item }) => {
     } = item;
 
     const userDetails = {
-        email: user.email
+        email: user?.email
     }
 
     const handleLike = () => {
@@ -46,7 +46,7 @@ const UpcomingMealCard = ({ item }) => {
 
     return (
         <div>
-            <div className="shadow-sm rounded-lg group ">
+            <div className="shadow-md rounded-lg group ">
                 <div className="overflow-hidden rounded-t-lg">
                     <img src={image} alt="" className="
                 transition ease-in duration-300 transform group-hover:scale-110

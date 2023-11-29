@@ -44,7 +44,6 @@ const MyReview = () => {
                     });
                     e.target.reset();
                     document.getElementById('my_modal_5').close()
-                    refetch()
                 }
             })
             .catch(err => {
@@ -54,27 +53,36 @@ const MyReview = () => {
 
 
     const handleDelete = (id) => {
-        console.log(id)
-        axiosSecure.delete(`/reviews/${id}`)
-            .then(res => {
-                console.log(res.data)
-                if (res.data.deletedCount) {
-                    refetch()
-                    Swal.fire({
-                        icon: "success",
-                        position: 'top',
-                        title: "Review has been deleted successfully",
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
-                    e.target.reset();
-                    document.getElementById('my_modal_5').close()
-                    refetch()
-                }
-            })
-            .catch(err => {
-                console.log(err)
-            })
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            axiosSecure.delete(`/reviews/${id}`)
+                .then(res => {
+                    console.log(res.data)
+                    if (res.data.deletedCount) {
+                        refetch()
+                        Swal.fire({
+                            icon: "success",
+                            position: 'top',
+                            title: "Review has been deleted successfully",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                })
+                .catch(err => {
+                    console.log(err)
+                })
+
+        });
+
+
     }
 
 

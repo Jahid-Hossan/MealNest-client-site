@@ -8,18 +8,15 @@ const useMeals = () => {
         queryKey: ['meals'],
         queryFn: async () => {
             const res = await axiosPublic.get("/meals")
-            return res.data;
+            // console.log(res.data)
+            const notUpcoming = res.data.filter(data => data.upcoming === false)
+            // console.log(notUpcoming)
+            return notUpcoming
         }
     })
 
 
-    // const {data:meal=[]}=useQuery({
-    //     queryKey: ['meals'],
-    //     queryFn: async () => {
-    //         const res = await axiosPublic.get("/meals")
-    //         return res.data;
-    //     }
-    // })
+
 
     return [meals]
 };

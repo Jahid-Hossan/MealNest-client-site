@@ -26,7 +26,7 @@ const UpcomingMeal = () => {
                     heading={"Upcoming Meals"}
                 ></BannerDynamic>
             </div>
-            <div className="my-5 px-5 rounded-md lg:my-10 grid grid-cols-3 gap-5">
+            <div className="my-5 px-5 rounded-md lg:my-10 grid container mx-auto grid-cols-3 gap-5">
                 {
                     upcomingMeal?.map(item => <UpcomingMealCard key={item._id} item={item}></UpcomingMealCard>)
                 }
