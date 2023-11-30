@@ -7,7 +7,7 @@ const BannerHome = () => {
                     <p className="text-white mt-5 font-semibold"> Elevate your university experience with a delightful array of meals, ensuring each moment is a feast of satisfaction and convenience.</p>
                     <form className="mt-5">
                         <input className="w-2/3 rounded-l-full px-3  py-3" type="text" name='name' placeholder='Search...' />
-                        <button type='submit' className=' py-3 px-6 rounded-r-full bg-btn-clr text-white font-semibold'>Search</button>
+                        <button className=' py-3 px-6 rounded-r-full bg-btn-clr text-white font-semibold'>Search</button>
                     </form>
                 </div>
 

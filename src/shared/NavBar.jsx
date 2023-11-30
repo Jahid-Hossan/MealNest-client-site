@@ -6,14 +6,14 @@ const NavBar = () => {
 
     const { user, logOut } = useAuth();
 
-
+    console.log(user)
 
 
     const menus = (
         <>
-            <li><NavLink to="/" activeClassName={'bg-red'}>Home</NavLink></li>
-            <li><NavLink to="/meals" activeClassName={'bg-red'}>Meals</NavLink></li>
-            <li><NavLink to="/upcoming" activeClassName={'bg-red'}>Upcoming</NavLink></li>
+            <li><NavLink to="/" >Home</NavLink></li>
+            <li><NavLink to="/meals" >Meals</NavLink></li>
+            <li><NavLink to="/upcoming" >Upcoming</NavLink></li>
         </>
     );
 
@@ -50,11 +50,11 @@ const NavBar = () => {
                     user ? <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full bg-white">
-                                <img alt="Tailwind CSS Navbar component" src="https://i.ibb.co/pKRHk26/profile.png" />
+                                <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
                             </div>
                         </label>
                         <ul tabIndex={0} className="menu  dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><p className="cursor-text disabled">{user?.displayName}</p></li>
+                            <p className="pl-3 font-semibold">{user?.displayName}</p>
                             <li className="hover:bg-slate-300 rounded" ><Link to={'/dashboard'}>Dashboard</Link></li>
                             <li className="hover:bg-slate-300 rounded" ><button onClick={logOut} >Logout</button></li>
                         </ul>

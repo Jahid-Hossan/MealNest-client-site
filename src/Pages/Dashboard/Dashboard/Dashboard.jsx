@@ -4,6 +4,7 @@ import { MdOutlineReviews } from "react-icons/md";
 import NavBar from "../../../shared/NavBar";
 import { GiForkKnifeSpoon, GiHotMeal, GiMeal } from "react-icons/gi";
 import useAdmin from "../../../Hooks/useAdmin";
+import { Helmet } from "react-helmet";
 
 const Dashboard = () => {
 
@@ -13,6 +14,9 @@ const Dashboard = () => {
 
     return (
         <div className="">
+            <Helmet>
+                <title>MealNest | Dashboard</title>
+            </Helmet>
             <div className="bg-navy"><NavBar /></div>
             <div className="flex">
                 <div className="w-64 min-h-screen  sticky bg-navy text-white" style={{ minHeight: 'calc(100vh - 68px)' }}>

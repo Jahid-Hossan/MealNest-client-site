@@ -8,6 +8,7 @@ import 'aos/dist/aos.css';
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const Meals = () => {
     const axiosPublic = useAxiosPublic()
@@ -82,6 +83,9 @@ const Meals = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>MealNest | Meals</title>
+            </Helmet>
             <div>
                 <BannerDynamic bgUrl={'https://i.ibb.co/0VX01zk/inner-bg2.png'}
                     heading={"All Meals"}

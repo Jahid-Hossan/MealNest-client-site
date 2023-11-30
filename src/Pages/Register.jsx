@@ -4,11 +4,14 @@ import useAxiosPublic from "../Hooks/useAxiosPublic";
 import useAuth from "../Hooks/useAuth";
 import Swal from 'sweetalert2';
 import useMemberships from "../Hooks/useMemberships";
+import { useState } from 'react';
+import { Dna } from "react-loader-spinner";
+
 
 const Register = () => {
     const { passwordSignUp, handleUpdateUser } = useAuth();
     const axiosPublic = useAxiosPublic()
-
+    const [loading, setLoading] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
     const [memberships, , freeMembership] = useMemberships()
@@ -25,7 +28,7 @@ const Register = () => {
     const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 
     const onSubmit = async (data) => {
-
+        setLoading(true);
         const imageFile = { image: data.image[0] }
         console.log(data.image)
 
@@ -51,6 +54,7 @@ const Register = () => {
 
                             axiosPublic.post('/users', user)
                                 .then(res => {
+                                    setLoading(false);
                                     reset()
                                     Swal.fire({
                                         icon: "success",
@@ -68,6 +72,7 @@ const Register = () => {
                     console.log(err)
                     const errorCode = err.code;
                     const errorMessage = err.message
+                    setLoading(false);
                     console.log(errorCode, errorMessage.split("/"));
                     Swal.fire({
                         icon: "error",
@@ -81,6 +86,15 @@ const Register = () => {
 
 
     };
+
+    const loader = <Dna
+        visible={true}
+        height="80"
+        width="80"
+        ariaLabel="dna-loading"
+        wrapperStyle={{}}
+        wrapperClass="dna-wrapper"
+    />
 
     return (
         <div>
@@ -190,7 +204,7 @@ const Register = () => {
 
                                         <div>
                                             <button type="submit" className="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 bg-btn-clr border border-transparent rounded-md focus:outline-none hover:bg-navy focus:bg-blue-700">
-                                                Create account
+                                                {loading ? loader : "Create account"}
                                             </button>
                                         </div>
 

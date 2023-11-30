@@ -88,6 +88,7 @@ const MyReview = () => {
 
     return (
         <div>
+
             <div className="overflow-x-auto my-5">
                 <table className="activetable activetable-zebra w-full">
                     {/* head */}

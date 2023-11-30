@@ -3,6 +3,7 @@ import BannerDynamic from "../../component/BannerDynamic";
 import useAxiosSecure from './../../Hooks/useAxiosSecure';
 import CategoryTab from "../Home/Category/CategoryTab/CategoryTab";
 import UpcomingMealCard from "./UpcomingMealCard";
+import { Helmet } from "react-helmet";
 
 const UpcomingMeal = () => {
     const axiosSecure = useAxiosSecure()
@@ -21,6 +22,9 @@ const UpcomingMeal = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>MealNest | Upcoming Meal</title>
+            </Helmet>
             <div>
                 <BannerDynamic bgUrl={'https://i.ibb.co/0VX01zk/inner-bg2.png'}
                     heading={"Upcoming Meals"}

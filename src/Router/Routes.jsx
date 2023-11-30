@@ -19,11 +19,13 @@ import AllMeals from "../Pages/Dashboard/Admin/AllMeals/AllMeals";
 import AllReviews from "../Pages/Dashboard/Admin/AllReviews/AllReviews";
 import ServeMeals from "../Pages/Dashboard/Admin/ServeMeals/ServeMeals";
 import UpcomingMeals from "../Pages/Dashboard/Admin/UpcomingMeals/UpcomingMeals";
+import Error from "../Pages/Error/Error";
 
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <Main />,
+        errorElement: <Error></Error>,
         children: [
             {
                 path: '/',
@@ -59,6 +61,7 @@ export const router = createBrowserRouter([
     {
         path: 'dashboard',
         element: <PrivetRoute><Dashboard /></PrivetRoute>,
+        errorElement: <Error></Error>,
         children: [
             {
                 path: 'user-home',
