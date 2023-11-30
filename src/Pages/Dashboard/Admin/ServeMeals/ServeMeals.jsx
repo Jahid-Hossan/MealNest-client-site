@@ -13,9 +13,19 @@ const ServeMeals = () => {
     const axiosSecure = useAxiosSecure()
     console.log(requestedMeals, mealRequest)
 
-    const handleServe = (id) => {
-        // console.log(id)
-        axiosSecure.patch(`/serve/${id}`)
+    const handleServe = (requestedMeal) => {
+
+        if (requestedMeal?.status === 'delivered') {
+            return Swal.fire({
+                position: "center",
+                icon: "error",
+                title: "Meal already delivered",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        }
+
+        axiosSecure.patch(`/serve/${requestedMeal._id}`)
             .then(res => {
                 refetch()
                 console.log(res.data)
@@ -79,8 +89,8 @@ const ServeMeals = () => {
                                 </td>
                                 <td>
                                     <button
-                                        onClick={() => handleServe(requestedMeal._id)}
-                                        disabled={requestedMeal?.status === 'delivered'}
+                                        onClick={() => handleServe(requestedMeal)}
+                                        // disabled={requestedMeal?.status === 'delivered'}
                                         className="btn btn-sm bg-btn-clr hover:bg-navy text-white">Serve</button>
                                 </td>
                             </tr>)
