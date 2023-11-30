@@ -38,7 +38,7 @@ export const router = createBrowserRouter([
             {
                 path: '/meals/:id',
                 element: <MealDetails />,
-                loader: ({ params }) => fetch(`http://localhost:5000/meals/${params.id}`)
+                loader: ({ params }) => fetch(`https://meal-nest-server.vercel.app/meals/${params.id}`)
             },
             {
                 path: '/upcoming',
