@@ -6,9 +6,6 @@
 **Responsive Homepage:**
    - The homepage is designed to be responsive on mobile, tablet, and desktop devices, providing a seamless user experience across different platforms.
 
-**Tanstack Query Integration:**
-   - Tanstack queries are implemented in all data fetching functionalities, specifically for the GET method, ensuring efficient and optimized data retrieval.
-
 **Interactive Navbar:**
    - The navbar features a dynamic layout with a logo, website name, and user-specific elements, providing a personalized experience for both logged-in and non-logged-in users.
 
